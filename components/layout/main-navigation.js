@@ -20,6 +20,10 @@ export default function MainNavigation() {
           <li>
             <Link href="/contact">Contact</Link>
           </li>
+
+          <li>
+            <Link href="/authentication">Authentication</Link>
+          </li>
         </ul>
       </nav>
     </header>
