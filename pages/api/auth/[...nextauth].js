@@ -1,5 +1,6 @@
 import NextAuth from "next-auth";
 import Providers from "next-auth/providers";
+import { sendStatusCode } from "next/dist/next-server/server/api-utils";
 import { verifyPassword } from "../../../lib/auth-util";
 import { connectToDatabase } from "../../../lib/db-util";
 
@@ -30,7 +31,7 @@ export default NextAuth({
 
         if (!isValid) {
           client.close();
-          throw new Error("Could not log you in!");
+          throw new Error("Wrong Email or password");
         }
 
         client.close();

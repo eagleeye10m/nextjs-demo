@@ -19,7 +19,17 @@ export default function Login() {
   }, [router]);
 
   if (isLoading) {
-    return <p>Loading...</p>;
+    return (
+      <Fragment>
+        <p>Loading...</p>
+        <style jsx global>{`
+          body {
+            background-color: white;
+          }
+        `}</style>
+        ;
+      </Fragment>
+    );
   }
 
   return (
